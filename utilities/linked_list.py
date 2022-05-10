@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, List
 
 from data_structures.linked_list import ListNode
 
@@ -29,3 +29,30 @@ def find_middle_of_list(head: Optional[ListNode]) -> Optional[ListNode]:
         fast = fast.next.next
 
     return slow.next
+
+
+def to_linked_list(items: List[int]) -> Optional[ListNode]:
+    if not items:
+        return None
+
+    result = ListNode(0)
+    dummy = result
+
+    for item in items:
+        dummy.next = ListNode(item)
+        dummy = dummy.next
+
+    return result.next
+
+
+def to_list(node: Optional[ListNode]) -> List[int]:
+    if not node:
+        return []
+
+    result = []
+
+    while node:
+        result.append(node.val)
+        node = node.next
+
+    return result
