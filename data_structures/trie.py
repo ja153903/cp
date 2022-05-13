@@ -13,10 +13,14 @@ class Trie:
     def __init__(self):
         self._root = TrieNode()
 
+    @property
+    def root(self):
+        return self._root
+
     def insert(self, word: str) -> None:
         current = self._root
 
-        for i, ch in enumerate(word):
+        for ch in word:
             if ch not in current.children:
                 current.children[ch] = TrieNode()
             current = current.children[ch]
