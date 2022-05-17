@@ -11,8 +11,13 @@ class Solution:
         The graph is represented as an array edges of length n where edges[i] = [ai, bi] indicates that there is an edge
         between nodes ai and bi in the graph.
 
-        Return an edge that can be removed so that the resulting graph is a tree of n nodes. If there are multiple answers,
-        return the answer that occurs last in the input.
+        Return an edge that can be removed so that the resulting graph is a tree of n nodes. If there are multiple
+        answers, return the answer that occurs last in the input.
+
+        Approach:
+
+        My initial intuition would be to use a UnionFind algorithm here to make sure that any edge we may want to remove
+        or enter
 
         :param edges:
         :return:
