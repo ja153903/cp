@@ -37,6 +37,7 @@ class Solution:
 
                 for record in graph[j]:
                     heapq.heappush(heap, record)
+
             if count >= nodes:
                 break
 
