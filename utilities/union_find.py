@@ -25,3 +25,7 @@ class UnionFind:
         else:
             self.parent[pv] = pu
             self.rank[pu] += 1
+
+    @property
+    def num_connected_components(self) -> int:
+        return len(set(self.find(i) for i in range(self.num_nodes)))
