@@ -10,8 +10,13 @@ class Solution:
 
         This problem is apparently 0/1 knapsack - I still don't really understand how 0/1 knapsack works
 
+        TODO: Still unclear about how this problem works.
+
         Reference:
         https://leetcode.com/problems/partition-equal-subset-sum/discuss/1624939/C%2B%2BPython-5-Simple-Solutions-w-Explanation-or-Optimization-from-Brute-Force-to-DP-to-Bitmask
+
+        0/1 Knapsack Reference:
+        https://leetcode.com/problems/partition-equal-subset-sum/discuss/90592/01-knapsack-detailed-explanation
 
         :param nums:
         :return:
