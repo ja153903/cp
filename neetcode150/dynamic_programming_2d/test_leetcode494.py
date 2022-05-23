@@ -1,6 +1,6 @@
 import pytest
 
-from .leetcode494 import Solution
+from neetcode150.dynamic_programming_2d.leetcode494 import Solution
 
 solution = Solution()
 

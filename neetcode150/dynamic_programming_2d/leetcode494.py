@@ -7,7 +7,8 @@ class Solution:
         We can try doing a brute force backtracking solution first
         and then see how we can optimize this
 
-        for each index, we either make it negative or positive
+        Reference: https://leetcode.com/problems/target-sum/discuss/97335/Short-Java-DP-Solution-with-Explanation
+
         :param nums:
         :param target:
         :return:
