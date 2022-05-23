@@ -3,7 +3,12 @@ from typing import List
 
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        # how do we use a stack thing for this
+        """
+        To use a stack with this, we essentially perform some sort of BFS
+
+        :param n:
+        :return:
+        """
         result = []
         stack = [("(", 1, 0)]
 

@@ -12,6 +12,10 @@ class Solution:
             # value is greater than the top of the stack
             # if it is, then we continually adjust the number of days
             # until we get a higher temperature
+            # Why do we continually pop the element on the stack?
+            # When we pop the item off the stack, we do it because
+            # we've found the next greater element. So we have to go through the
+            # entire stack to update this information
             while stack and temperature > temperatures[stack[-1]]:
                 idx = stack.pop()
                 result[idx] = i - idx
