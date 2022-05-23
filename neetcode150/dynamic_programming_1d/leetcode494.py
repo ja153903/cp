@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Dict, Tuple
 
 
 class Solution:
@@ -12,16 +12,34 @@ class Solution:
         :param target:
         :return:
         """
-        result = self._backtrack(nums, target, 0, 0)
+        memo = {}
+        result = self._backtrack(nums, target, 0, 0, memo)
 
         return result
 
-    def _backtrack(self, nums: List[int], target: int, i: int, path: int) -> int:
+    def _backtrack(
+        self,
+        nums: List[int],
+        target: int,
+        i: int,
+        path: int,
+        memo: Dict[Tuple[int, int], int],
+    ) -> int:
+        # the optimization here is to keep track of the memo
+        # for this we need to pick the proper keys
+        # in our case, we want to use the index and the path sum
+        # as our key
+        if (i, path) in memo:
+            return memo[(i, path)]
+
         if i == len(nums):
             if path == target:
                 return 1
             return 0
 
-        return self._backtrack(nums, target, i + 1, path + nums[i]) + self._backtrack(
-            nums, target, i + 1, path - nums[i]
-        )
+        pos = self._backtrack(nums, target, i + 1, path + nums[i], memo)
+        neg = self._backtrack(nums, target, i + 1, path - nums[i], memo)
+
+        memo[(i, path)] = pos + neg
+
+        return memo[(i, path)]
