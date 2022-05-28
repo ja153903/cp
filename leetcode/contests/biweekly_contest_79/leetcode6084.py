@@ -14,13 +14,11 @@ class Solution:
         for sender, word_count in log.items():
             max_sender, max_count = _max
 
-            if max_sender is None:
+            if (
+                max_sender is None
+                or (max_count == word_count and max_sender < sender)
+                or (word_count > max_count)
+            ):
                 _max = (sender, word_count)
-            else:
-                if max_count == word_count:
-                    if max_sender < sender:
-                        _max = (sender, word_count)
-                elif word_count > max_count:
-                    _max = (sender, word_count)
 
         return _max[0] if _max[0] is not None else ""
