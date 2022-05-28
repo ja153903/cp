@@ -26,6 +26,9 @@ def knapsack(weights: List[int], profit: List[int], m: int) -> int:
     """
     dp = [[0 for _ in range(m + 1)] for _ in range(len(weights) + 1)]
 
+    # What does our DP matrix hold? we keep track of the maximum profit
+    # based on the first i types of weights up to some weight constraint m
+
     # dp[i, w] = max(dp[i - 1, w], dp[i - 1, w - w[i]])
     for i in range(1, len(weights) + 1):
         for j in range(1, m + 1):
