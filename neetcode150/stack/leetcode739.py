@@ -3,6 +3,8 @@ from typing import List
 
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+        # This question screams finding the next greater element
+        # If this is the case, then we should use a monotonic stack.
         result = [0] * len(temperatures)
         stack = []
 
