@@ -44,7 +44,6 @@ class PriorityQueue {
       return null;
     }
 
-    // when we remove an item from the heap, we have to maintain
     const minPriorityItem = this.nodes[0];
     const end = this.nodes.pop();
 
@@ -153,6 +152,20 @@ class PriorityQueue {
     }
 
     return this.nodes[0].item;
+  }
+
+  /**
+   * @returns {number}
+   */
+  get size() {
+    return this.nodes.length;
+  }
+
+  /**
+   * @returns {Array<any>}
+   */
+  get items() {
+    return this.nodes.map((node) => node.item);
   }
 }
 
