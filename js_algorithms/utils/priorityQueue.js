@@ -2,10 +2,22 @@ class PrioritizedItem {
   /**
    *
    * @param {number} priority
-   * @param {any} item
+   * @param {*} item
    */
   constructor(priority, item) {
+    /**
+     * priority stores the weight with which
+     * an item is ordered within the priority queue
+     *
+     * @type {number}
+     */
     this.priority = priority;
+
+    /**
+     * item stores any value associated with the priority.
+     *
+     * @type {*}
+     */
     this.item = item;
   }
 }
@@ -144,7 +156,7 @@ class PriorityQueue {
   }
 
   /**
-   * @returns {any}
+   * @returns {*}
    */
   get front() {
     if (!this.nodes.length) {
@@ -162,7 +174,7 @@ class PriorityQueue {
   }
 
   /**
-   * @returns {Array<any>}
+   * @returns {Array<*>}
    */
   get items() {
     return this.nodes.map((node) => node.item);
