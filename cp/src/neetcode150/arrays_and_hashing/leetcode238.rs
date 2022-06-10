@@ -9,7 +9,6 @@ impl Solution {
         }
 
         let mut right = 1;
-        let mut i = nums.len() - 1;
 
         for i in (0..nums.len()).rev() {
             result[i] *= right;
