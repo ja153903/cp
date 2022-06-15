@@ -1,3 +1,4 @@
+mod contests;
 mod neetcode150;
 pub mod utility;
 
