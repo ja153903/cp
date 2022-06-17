@@ -48,7 +48,6 @@ class PriorityQueue {
 
   /**
    *
-   * @param {PrioritizedItem} prioritizedItem
    * @returns {PrioritizedItem | null}
    */
   remove() {
