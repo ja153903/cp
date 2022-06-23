@@ -1,4 +1,5 @@
 mod contests;
+mod leetcode;
 mod neetcode150;
 pub mod utility;
 

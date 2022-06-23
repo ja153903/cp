@@ -59,5 +59,6 @@ mod tests {
         trie.insert(String::from("apple"));
 
         assert_eq!(trie.starts_with(String::from("app")), true);
+        assert_eq!(trie.search(String::from("jaime")), false);
     }
 }
