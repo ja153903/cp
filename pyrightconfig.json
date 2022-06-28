@@ -1,5 +1,9 @@
 {
-    "executionEnvironments": [
-        {"root": "."}
-    ]
+   "executionEnvironments" : [
+      {
+         "root" : "."
+      }
+   ],
+   "venv" : "cp",
+   "venvPath" : "/Users/jaimeabbariao/.pyenv/versions"
 }
