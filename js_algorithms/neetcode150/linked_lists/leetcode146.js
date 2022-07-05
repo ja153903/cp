@@ -116,4 +116,53 @@ class LRUCache {
   }
 }
 
-module.exports = { LRUCache };
+class AnotherLRUCache {
+  constructor(capacity) {
+    this.capacity = capacity;
+    this.cache = new Map();
+    this.lru = new Set();
+  }
+
+  set(key, value) {
+    if (this.cache.size === this.capacity && !this.cache.has(key)) {
+      // evict LRU
+      const lru = this.lru.values().next();
+      this.cache.delete(lru.value);
+      this.lru.delete(lru.value);
+    }
+
+    this.cache.set(key, value);
+    this.lru.add(key);
+  }
+
+  get(key) {
+    if (!this.cache.has(key)) {
+      return -1;
+    }
+
+    const value = this.cache.get(key) ?? -1;
+
+    this.updateLru(key);
+
+    return value;
+  }
+
+  updateLru(key) {
+    if (this.lru.has(key)) {
+      this.lru.delete(key);
+      this.lru.add(key);
+    }
+  }
+}
+
+const lru = new AnotherLRUCache(2);
+lru.set(1, 1);
+lru.set(2, 2);
+console.log(lru.get(1));
+
+lru.set(3, 3);
+console.log(lru.get(2));
+
+lru.set(4, 4);
+
+console.log(lru.get(1));
