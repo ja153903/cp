@@ -1,6 +1,5 @@
 class PrioritizedItem {
   /**
-   *
    * @param {number} priority
    * @param {*} item
    */
@@ -30,7 +29,6 @@ class PrioritizedItem {
 class PriorityQueue {
   constructor() {
     /**
-     *
      * @type {PrioritizedItem[]}
      * @public
      */
@@ -38,7 +36,6 @@ class PriorityQueue {
   }
 
   /**
-   *
    * @param {PrioritizedItem} prioritizedItem
    */
   insert(prioritizedItem) {
@@ -47,7 +44,6 @@ class PriorityQueue {
   }
 
   /**
-   *
    * @returns {PrioritizedItem | null}
    */
   remove() {
@@ -104,7 +100,6 @@ class PriorityQueue {
   }
 
   /**
-   *
    * @returns {void}
    */
   moveUp() {
@@ -128,7 +123,6 @@ class PriorityQueue {
   }
 
   /**
-   *
    * @param {number} index
    * @returns {number}
    */
@@ -137,7 +131,6 @@ class PriorityQueue {
   }
 
   /**
-   *
    * @param {number} index
    * @returns {number}
    */
@@ -146,7 +139,6 @@ class PriorityQueue {
   }
 
   /**
-   *
    * @param {number} index
    * @returns {number}
    */

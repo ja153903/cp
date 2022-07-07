@@ -1,5 +1,5 @@
-const generateCounter = require("../../utils/generateCounter");
-const { PriorityQueue, PrioritizedItem } = require("../../utils/priorityQueue");
+const generateCounter = require('../../utils/generateCounter');
+const { PriorityQueue, PrioritizedItem } = require('../../utils/priorityQueue');
 
 /**
  * 347. Top K Frequent Elements

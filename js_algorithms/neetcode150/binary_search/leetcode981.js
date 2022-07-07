@@ -1,12 +1,10 @@
 class _TMNode {
   constructor(value, timestamp) {
     /**
-     *
      * @type {string}
      */
     this.value = value;
     /**
-     *
      * @type {number}
      */
     this.timestamp = timestamp;
@@ -16,7 +14,6 @@ class _TMNode {
 class TimeMap {
   constructor() {
     /**
-     *
      * @type {Map<string, _TMNode[]>}
      * @private
      */
@@ -45,7 +42,7 @@ class TimeMap {
    */
   get(key, timestamp) {
     if (!this._map.has(key)) {
-      return "";
+      return '';
     }
 
     const nodes = this._map.get(key);
@@ -70,7 +67,7 @@ class TimeMap {
       return nodes[result].value;
     }
 
-    return "";
+    return '';
   }
 }
 

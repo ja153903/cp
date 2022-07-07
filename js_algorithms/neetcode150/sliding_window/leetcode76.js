@@ -15,7 +15,7 @@
  */
 const minWindow = function (s, t) {
   if (s.length < t.length) {
-    return "";
+    return '';
   }
 
   const frequency = new Map();
@@ -52,7 +52,7 @@ const minWindow = function (s, t) {
   }
 
   if (minLength === Number.MAX_VALUE) {
-    return "";
+    return '';
   }
 
   return s.substring(minStart, minStart + minLength);

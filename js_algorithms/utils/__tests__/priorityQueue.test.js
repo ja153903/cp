@@ -1,7 +1,7 @@
-const { PrioritizedItem, PriorityQueue } = require("../priorityQueue");
+const { PrioritizedItem, PriorityQueue } = require('../priorityQueue');
 
-describe("PriorityQueue", () => {
-  test("it should properly create priority queue", () => {
+describe('PriorityQueue', () => {
+  test('it should properly create priority queue', () => {
     const items = [
       new PrioritizedItem(1, 1),
       new PrioritizedItem(2, 2),

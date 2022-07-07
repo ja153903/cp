@@ -49,8 +49,8 @@ const pacificAtlantic = function (heights) {
   const atlanticHashes = new Set(atlantic.map((key) => `${key[0]},${key[1]}`));
 
   return Array.from(
-    new Set([...pacificHashes].filter((key) => atlanticHashes.has(key)))
-  ).map((key) => key.split(",").map((item) => parseInt(item)));
+    new Set([...pacificHashes].filter((key) => atlanticHashes.has(key))),
+  ).map((key) => key.split(',').map((item) => parseInt(item)));
 };
 
 /**
@@ -65,12 +65,14 @@ function bfs(heights, result, queue, visited) {
 
     visited.add(`${front[0]},${front[1]}`);
 
-    for (const [dx, dy] of [
-      [1, 0],
-      [-1, 0],
-      [0, 1],
-      [0, -1],
-    ]) {
+    for (
+      const [dx, dy] of [
+        [1, 0],
+        [-1, 0],
+        [0, 1],
+        [0, -1],
+      ]
+    ) {
       const [cx, cy] = [front[0] + dx, front[1] + dy];
       const hash = `${cx},${cy}`;
 

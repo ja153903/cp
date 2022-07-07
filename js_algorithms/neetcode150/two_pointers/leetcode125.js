@@ -1,4 +1,4 @@
-const { isalnum } = require("../../utils/characters");
+const { isalnum } = require('../../utils/characters');
 
 /**
  * 125. Valid Palindrome
@@ -14,7 +14,7 @@ const { isalnum } = require("../../utils/characters");
  */
 const isPalindrome = function (s) {
   const filtered = s
-    .split("")
+    .split('')
     .filter((ch) => isalnum(ch))
     .map((ch) => ch.toLowerCase());
 

@@ -34,12 +34,14 @@ const orangesRotting = function (grid) {
     for (let i = 0; i < size; i++) {
       const [cx, cy] = queue.shift();
 
-      for (const [dx, dy] of [
-        [1, 0],
-        [-1, 0],
-        [0, 1],
-        [0, -1],
-      ]) {
+      for (
+        const [dx, dy] of [
+          [1, 0],
+          [-1, 0],
+          [0, 1],
+          [0, -1],
+        ]
+      ) {
         const [nx, ny] = [cx + dx, cy + dy];
 
         if (

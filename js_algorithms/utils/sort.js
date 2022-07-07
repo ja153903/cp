@@ -10,9 +10,9 @@ function sortString(s) {
   }
 
   return s
-    .split("")
+    .split('')
     .sort((a, b) => a.localeCompare(b))
-    .join("");
+    .join('');
 }
 
 module.exports = { sortString };

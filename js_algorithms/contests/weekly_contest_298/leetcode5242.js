@@ -21,7 +21,7 @@ const greatestLetter = function (s) {
     }
   }
 
-  return "";
+  return '';
 };
 
 module.exports = { greatestLetter };

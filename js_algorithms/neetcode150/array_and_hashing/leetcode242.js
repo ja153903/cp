@@ -1,5 +1,5 @@
-const generateCounter = require("../../utils/generateCounter");
-const sum = require("../../utils/sum");
+const generateCounter = require('../../utils/generateCounter');
+const sum = require('../../utils/sum');
 
 /**
  * 242. Valid Anagram
@@ -14,7 +14,7 @@ const sum = require("../../utils/sum");
  * @return {boolean}
  */
 const isAnagram = function (s, t) {
-  const sCounter = generateCounter(s.split(""));
+  const sCounter = generateCounter(s.split(''));
 
   for (const ch of t) {
     const currentCount = sCounter.get(ch) ?? 0;

@@ -18,12 +18,14 @@ const isValidSudoku = function (board) {
 
   for (let row = 0; row < 9; row++) {
     for (let col = 0; col < 9; col++) {
-      if (board[row][col] !== ".") {
+      if (board[row][col] !== '.') {
         const rowHash = `Row ${row} has value ${board[row][col]}`;
         const colHash = `Col ${col} has value ${board[row][col]}`;
-        const subBoxHash = `SubBoxHash (${Math.floor(row / 3)}, ${Math.floor(
-          col / 3
-        )}) has value ${board[row][col]}`;
+        const subBoxHash = `SubBoxHash (${Math.floor(row / 3)}, ${
+          Math.floor(
+            col / 3,
+          )
+        }) has value ${board[row][col]}`;
 
         if (seen.has(rowHash) || seen.has(colHash) || seen.has(subBoxHash)) {
           return false;

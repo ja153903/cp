@@ -4,7 +4,7 @@
  */
 const evalRPN = function (tokens) {
   const stack = [];
-  const ops = ["+", "-", "*", "/"];
+  const ops = ['+', '-', '*', '/'];
 
   for (const token of tokens) {
     if (ops.includes(token)) {
@@ -12,16 +12,16 @@ const evalRPN = function (tokens) {
       const first = parseInt(stack.pop());
 
       switch (token) {
-        case "+":
+        case '+':
           stack.push((first + second).toString());
           break;
-        case "-":
+        case '-':
           stack.push((first - second).toString());
           break;
-        case "*":
+        case '*':
           stack.push((first * second).toString());
           break;
-        case "/":
+        case '/':
           stack.push(Math.trunc(first / second).toString());
           break;
       }

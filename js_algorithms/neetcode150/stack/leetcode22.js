@@ -5,7 +5,7 @@
 const generateParenthesis = function (n) {
   const result = [];
   const stack = [];
-  stack.push({ path: "", open: 0, close: 0 });
+  stack.push({ path: '', open: 0, close: 0 });
 
   while (stack.length) {
     const { path, open, close } = stack.pop();

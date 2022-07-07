@@ -1,4 +1,4 @@
-const { sortString } = require("../../utils/sort");
+const { sortString } = require('../../utils/sort');
 
 /**
  * 49. Group Anagrams

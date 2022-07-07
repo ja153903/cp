@@ -5,7 +5,7 @@
  * @return {string}
  */
 const encode = function (strs) {
-  return strs.map((str) => `${str.length}/${str}`).join("");
+  return strs.map((str) => `${str.length}/${str}`).join('');
 };
 
 /**
@@ -19,7 +19,7 @@ const decode = function (s) {
   let start = 0;
 
   while (start < s.length) {
-    const slash = s.indexOf("/", start);
+    const slash = s.indexOf('/', start);
     const length = parseInt(s.substring(start, slash));
     const subResult = s.substring(slash + 1, slash + length + 1);
 

@@ -1,4 +1,4 @@
-const { threeSum } = require("../leetcode13");
+const { threeSum } = require('../leetcode13');
 
 test.each([
   {
@@ -8,6 +8,6 @@ test.each([
       [-1, 0, 1],
     ],
   },
-])("threeSum($nums)", ({ nums, expected }) => {
+])('threeSum($nums)', ({ nums, expected }) => {
   expect(threeSum(nums)).toEqual(expected);
 });

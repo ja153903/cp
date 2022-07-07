@@ -7,7 +7,7 @@ const numIslands = function (grid) {
 
   for (let i = 0; i < grid.length; i++) {
     for (let j = 0; j < grid[0].length; j++) {
-      if (grid[i][j] === "1") {
+      if (grid[i][j] === '1') {
         dfs(grid, i, j);
         result++;
       }
@@ -23,12 +23,12 @@ function dfs(grid, i, j) {
     j < 0 ||
     i >= grid.length ||
     j >= grid[0].length ||
-    grid[i][j] !== "1"
+    grid[i][j] !== '1'
   ) {
     return;
   }
 
-  grid[i][j] = "#";
+  grid[i][j] = '#';
 
   dfs(grid, i + 1, j);
   dfs(grid, i - 1, j);
